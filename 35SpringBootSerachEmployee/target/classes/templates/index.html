@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>employee</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+</head>
+<body>
+<div align="center">
+  <h>Employee Management</h>
+  <br/>
+  <div class="col-sm-4">
+    <form action="#" th:action="@{/search}" th:object="${employee}" method="post">
+        <div align="left">
+            <tr>
+                <label class="form-label">Employee Id</label>
+            <td>
+            <input type="text" th:field="*{id}" class="form-control" placeholder="Employee Id Please" />
+             </td>
+            </tr>
+        </div>
+
+           <br>
+        <tr>
+            <td colspan="2"><button type="submit" class="btn btn-info">Search</button></td>
+            <td colspan="2"><button type="reset" class="btn btn-info">Reset</button></td>
+        </tr>
+
+        <div align="left">
+            <tr>
+                <label class="form-label">Employee Ename</label>
+                <td>
+                    <input type="text" th:field="${employee.ename}" class="form-control" placeholder="Employee Name" readonly/>
+                    <input type="text" th:field="${employee.mobile}" class="form-control" placeholder="Employee Name" readonly/>
+                    <input type="text" th:field="${employee.salary}" class="form-control" placeholder="Employee Name" readonly />
+                </td>
+            </tr>
+        </div>
+
+    </form>
+  </div>
+</div>
+</body>
+</html>
