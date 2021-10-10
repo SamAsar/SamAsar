@@ -1,0 +1,2 @@
+rootProject.name = "SQLiteDatabaseCrud"
+include ':app'
